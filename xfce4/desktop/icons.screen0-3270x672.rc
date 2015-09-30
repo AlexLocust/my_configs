@@ -1,0 +1,32 @@
+[virtualbox]
+row=3
+col=0
+
+[putty.reg]
+row=4
+col=0
+
+[Freemind]
+row=0
+col=1
+
+[CentOS-ARM_CIPP-default]
+row=1
+col=1
+
+[Windows 7]
+row=5
+col=0
+
+[Корзина]
+row=2
+col=0
+
+[Файловая система]
+row=1
+col=0
+
+[Домашний каталог]
+row=0
+col=0
+

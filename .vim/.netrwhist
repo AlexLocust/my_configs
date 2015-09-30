@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/etc/rsyslog.d'
+let g:netrw_dirhist_2='/home/aschukarev/projects/svp_decoder_last/svp_decoder_1.3.0/src/svp_smk_name_builder'
+let g:netrw_dirhist_3='/home/aschukarev/projects/svp-decoder-git/1.4'
