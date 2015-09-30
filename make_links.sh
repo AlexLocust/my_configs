@@ -6,7 +6,7 @@ ln -s ~/.my_configs/xfce4/ ~/.config/xfce4
 ln -s ~/.my_configs/xfce4-session/ ~/.config/xfce4-session
 ln -s ~/.my_configs/.zshrc ~/.zshrc
 ln -s ~/.my_configs/.Xresources ~/.Xresources
-
+ln -s ~/.my_configs/.fonts ~/.fonts
 
 
 
