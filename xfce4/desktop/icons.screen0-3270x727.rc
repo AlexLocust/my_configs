@@ -14,13 +14,13 @@ col=1
 row=0
 col=1
 
+[tver_access.txt]
+row=3
+col=1
+
 [Windows 7]
 row=5
 col=0
-
-[Том 8,0 GB]
-row=2
-col=1
 
 [Корзина]
 row=2
