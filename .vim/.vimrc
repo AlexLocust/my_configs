@@ -124,3 +124,6 @@ set number
 set list
 set listchars=tab:→∙
 
+" enable pathogen
+execute pathogen#infect()
+
