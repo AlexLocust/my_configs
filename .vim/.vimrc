@@ -100,6 +100,27 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" lookup for specific .vimrc in each working directory
 set exrc
+
+" do not allow local .vimrc to do too much stuff
 set secure
+
+" use 4 columns for tab
+set tabstop=4
+
+" use 'softtabstop' same as 'shiftwidth'
+set softtabstop=-1
+
+" autoindent - 4
+set shiftwidth=4
+
+" use spaces against of tabs
+set expandtab
+
+" show line numbers
+set number
+
+set list
+set listchars=tab:→∙
 
