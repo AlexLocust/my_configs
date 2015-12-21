@@ -127,3 +127,32 @@ set listchars=tab:→∙
 " enable pathogen
 execute pathogen#infect()
 
+" autostart nerdtree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+call vundle#end()            " required
+
+" Map ctrl-movement keys to window switching
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left> 
+
+" Map f12 to rebuild project tags
+map <f12> :!ctags -R . <cr>
+
+" do not indent C++ namespaces
+set cino=N-s
+
+" :W - writes file with sudo
+command W w !sudo tee % > /dev/null
