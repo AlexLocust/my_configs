@@ -47,17 +47,6 @@ if has('mouse')
   set mouse=a
 endif
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-  set background=dark
-"  colorscheme solarized
-
-  highlight Normal ctermfg=grey ctermbg=black
-endif
-
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
@@ -128,6 +117,7 @@ set listchars=tab:→∙
 execute pathogen#infect()
 
 " autostart nerdtree
+let g:tagbar_autofocus = 0 " disable tagbar autofocus
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
@@ -140,7 +130,50 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'rdnetto/YCM-Generator'
+Plugin 'majutsushi/tagbar'              " Class/module browser
+
+"""""""""""""""""
+"" PYTHON MODE
+"""""""""""""""""
+Bundle 'klen/python-mode'
+
 call vundle#end()            " required
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax enable
+  set hlsearch
+  set background=dark
+  
+  let g:solarized_termcolors=256
+  colorscheme solarized
+
+"  highlight Normal ctermfg=grey ctermbg=black
+endif
+
+" YCM bindings
+let mapleader=","
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+" Python Mode settings
+let g:pymode_rope=0
+let g:pymode_lint_ignore = "E501, C0110,W0102,F0401,C0301"
+let g:pymode_doc=1
+let g:pymode_doc_key='<f1>'
+let g:pymode_lint=1
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_write = 1
+let g:pymode_virtualenv = 1
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_key = '<leader>b'
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+let g:pymode_folding=0
+iab pdb import ipdb; ipdb.set_trace()
 
 " Map ctrl-movement keys to window switching
 map <C-k> <C-w><Up>
@@ -155,4 +188,9 @@ map <f12> :!ctags -R . <cr>
 set cino=N-s
 
 " :W - writes file with sudo
-command W w !sudo tee % > /dev/null
+" command W w !sudo tee % > /dev/null
+
+map <F7> :make<CR>
+autocmd VimEnter * copen
+autocmd VimEnter * wincmd p
+autocmd VimEnter * nested :TagbarOpen
