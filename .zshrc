@@ -82,3 +82,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+alias addkey="ssh-add ~/.ssh/ext_rsa"
+export TERM="xterm-256color"
+export WORKON_HOME=~/projects/VirtEnvs
+source /usr/local/bin/virtualenvwrapper.sh
