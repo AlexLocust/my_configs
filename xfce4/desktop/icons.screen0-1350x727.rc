@@ -1,21 +1,57 @@
-[virtualbox]
-row=3
+[Windows 7]
+row=5
 col=0
 
 [putty.reg]
 row=4
 col=0
 
-[Freemind]
-row=0
+[virtualbox]
+row=2
 col=1
+
+[highload_reports]
+row=6
+col=1
+
+[load_run_3.tar.gz]
+row=2
+col=2
+
+[calm_load_tests_2015-10-05_tsung_reports.zip]
+row=0
+col=2
+
+[service.config]
+row=0
+col=3
 
 [CentOS-ARM_CIPP-default]
 row=1
 col=1
 
-[Windows 7]
-row=5
+[load_run_2.tar.gz]
+row=1
+col=2
+
+[tver_access.txt]
+row=4
+col=1
+
+[Freemind]
+row=0
+col=1
+
+[load_run_2]
+row=3
+col=0
+
+[load_run_3]
+row=3
+col=1
+
+[python]
+row=6
 col=0
 
 [Корзина]

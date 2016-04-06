@@ -4,7 +4,7 @@
   <property name="DisableTouchpadWhileTyping" type="bool" value="true"/>
   <property name="DLL063E00_06CB2934" type="empty">
     <property name="Properties" type="empty">
-      <property name="Device_Enabled" type="int" value="0"/>
+      <property name="Device_Enabled" type="int" value="1"/>
     </property>
   </property>
 </channel>

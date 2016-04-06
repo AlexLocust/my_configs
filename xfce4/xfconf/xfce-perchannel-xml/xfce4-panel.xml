@@ -21,6 +21,7 @@
         <value type="int" value="6"/>
         <value type="int" value="2"/>
         <value type="int" value="5"/>
+        <value type="int" value="12"/>
       </property>
     </property>
   </property>
@@ -40,12 +41,14 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
-        <value type="string" value="orage"/>
+        <value type="string" value="thunar"/>
         <value type="string" value="апплет networkmanager"/>
+        <value type="string" value="google-chrome"/>
+        <value type="string" value="google-chrome-stable"/>
         <value type="string" value="skype"/>
+        <value type="string" value="orage"/>
         <value type="string" value="x-www-browser"/>
         <value type="string" value="parcellite"/>
-        <value type="string" value="google-chrome"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
     </property>
@@ -69,5 +72,10 @@
     </property>
     <property name="plugin-10" type="string" value="xkb-plugin"/>
     <property name="plugin-11" type="string" value="battery"/>
+    <property name="plugin-12" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14446413621.desktop"/>
+      </property>
+    </property>
   </property>
 </channel>

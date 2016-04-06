@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-mixer" version="1.0">
-  <property name="sound-card" type="string" value="HDAIntelHDMIAlsamixer"/>
+  <property name="sound-card" type="string" value="PlaybackPulseAudioMixer"/>
   <property name="volume-step-size" type="uint" value="5"/>
+  <property name="sound-cards" type="empty">
+    <property name="HDAIntelHDMIAlsamixer" type="array">
+    </property>
+    <property name="PlaybackPulseAudioMixer" type="array">
+      <value type="string" value="Master"/>
+    </property>
+    <property name="CaptureMonitorofPulseAudioMixer" type="array">
+      <value type="string" value="Master"/>
+    </property>
+    <property name="CapturePulseAudioMixer" type="array">
+      <value type="string" value="Master"/>
+    </property>
+  </property>
+  <property name="window-height" type="int" value="490"/>
+  <property name="window-width" type="int" value="725"/>
 </channel>
