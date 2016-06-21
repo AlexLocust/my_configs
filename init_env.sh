@@ -7,6 +7,11 @@ ln -s ~/my_configs/.vim/ ~/.vim
 ln -s ~/my_configs/.tmux.conf ~/.tmux.conf
 # install VIM plugins throught vundle
 vim +PluginInstall +qall
+
+echo Installing YouCompleteMe
+cd ~/my_configs/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+cd -
 #ln -s ~/.my_configs/fontconfig/fonts.conf ~/.fonts.conf
 #ln -s ~/.my_configs/xfce4/ ~/.config/xfce4
 #ln -s ~/.my_configs/xfce4-session/ ~/.config/xfce4-session
