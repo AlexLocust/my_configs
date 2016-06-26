@@ -1,4 +1,5 @@
 sudo apt-get install aptitude vim-nox-py2 mc cmake python-dev python3-dev ffmpeg xclip
+sudo virtualenvwrapper htop ninja-build
 
 git submodule update --init --recursive
 
