@@ -194,3 +194,9 @@ map <F7> :make<CR>
 autocmd VimEnter * copen
 autocmd VimEnter * wincmd p
 autocmd VimEnter * nested :TagbarOpen
+
+" copy/paste to system clipboard with <leader>y/p
+nmap <leader>y "+y
+vmap <leader>y "+y
+nmap <leader>p "+p
+vmap <leader>p "+p
