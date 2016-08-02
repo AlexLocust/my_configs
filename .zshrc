@@ -87,4 +87,4 @@ source $ZSH/oh-my-zsh.sh
 alias addkey="ssh-add ~/.ssh/ext_rsa"
 export TERM="xterm-256color"
 export WORKON_HOME=~/projects/VirtEnvs
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh 
