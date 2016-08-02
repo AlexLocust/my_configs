@@ -1,6 +1,6 @@
 sudo apt-get install aptitude vim-nox-py2 mc cmake python-dev python3-dev ffmpeg xclip
 sudo apt-get install virtualenvwrapper htop ninja-build
-sudo apt-get install zsh ctags openssh-server git-core bmon
+sudo apt-get install zsh ctags openssh-server git-core bmon libindicator7 libappindicator1
 
 git submodule update --init --recursive
 
