@@ -2,6 +2,24 @@ sudo apt-get install aptitude vim-nox-py2 mc cmake python-dev python3-dev ffmpeg
 sudo apt-get install virtualenvwrapper htop ninja-build
 sudo apt-get install zsh ctags openssh-server git-core bmon libindicator7 libappindicator1
 
+echo Installing Skype
+# taken from https://help.ubuntu.com/community/Skype
+sudo dpkg --add-architecture i386
+sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+sudo apt-get update && sudo apt-get install skype
+
+echo Installing OpenJDK / OpenJRE
+# http://help.ubuntu.ru/wiki/java
+sudo apt-get install default-jdk default-jre
+
+
+#echo Installing Oracle Java
+## http://help.ubuntu.ru/wiki/java
+#echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+#sudo add-apt-repository ppa:webupd8team/java
+#sudo apt-get update
+#sudo apt-get install oracle-java8-installer
+
 git submodule update --init --recursive
 
 ln -s ~/my_configs/.vim/.vimrc ~/.vimrc
