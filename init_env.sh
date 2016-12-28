@@ -1,6 +1,6 @@
-sudo apt-get install aptitude vim-nox-py2 mc cmake python-dev python3-dev ffmpeg xclip
-sudo apt-get install virtualenvwrapper htop ninja-build
-sudo apt-get install zsh ctags openssh-server git-core bmon libindicator7 libappindicator1
+sudo apt-get install -y aptitude vim-nox-py2 mc cmake python-dev python3-dev ffmpeg xclip tmux
+sudo apt-get install -y virtualenvwrapper htop ninja-build
+sudo apt-get install -y zsh ctags openssh-server git-core bmon libindicator7 libappindicator1
 
 echo Installing Skype
 # taken from https://help.ubuntu.com/community/Skype
@@ -12,6 +12,19 @@ echo Installing OpenJDK / OpenJRE
 # http://help.ubuntu.ru/wiki/java
 sudo apt-get install default-jdk default-jre
 
+# docker repos
+echo Installing Docker
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
+sudo apt-get update
+sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
+sudo apt-get install -y docker-engine
+
+# VirtualBox repositories
+echo Installing VirtualBox repositories
+echo "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee -a /etc/apt/sources.list.d/virtualbox.list 
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 
 #echo Installing Oracle Java
 ## http://help.ubuntu.ru/wiki/java
