@@ -10,7 +10,7 @@ sudo apt-get update && sudo apt-get install skype
 
 echo Installing OpenJDK / OpenJRE
 # http://help.ubuntu.ru/wiki/java
-sudo apt-get install default-jdk default-jre
+sudo apt-get install -y default-jdk default-jre ant
 
 # docker repos
 echo Installing Docker
